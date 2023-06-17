@@ -1,0 +1,49 @@
+[{
+  "_id": {
+    "$oid": "64893ab3f1fa5469daaedd83"
+  },
+  "name": "samsung",
+  "category": 1,
+  "variant": [
+    {
+      "name": "s22",
+      "year": 2022,
+      "price": 10000
+    },
+    {
+      "name": "s21",
+      "year": 2021,
+      "price": 8000
+    },
+    {
+      "name": "s20",
+      "year": 2020,
+      "price": 5000
+    }
+  ],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "648951021ce3483feac3548b"
+  },
+  "name": "iphone",
+  "category": 1,
+  "variant": [
+    {
+      "name": "10",
+      "year": 2022,
+      "price": 100300
+    },
+    {
+      "name": "11",
+      "year": 2023,
+      "price": 803300
+    },
+    {
+      "name": "12",
+      "year": 2020,
+      "price": 3333
+    }
+  ],
+  "__v": 0
+}]

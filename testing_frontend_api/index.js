@@ -24,7 +24,7 @@ app.use("/api/v1/auth",authRouter)
 const initApp = async() => { 
     console.log("Connecting to mongo");
     try {
-        await mongoose.connect(`mongodb://127.0.0.1:27017/persiapanuas`)
+        await mongoose.connect(`mongodb://127.0.0.1:27017/proyek`)
         console.log("Berhasil connect");
         app.listen(port,()=>{
             console.log(`Example app listening on port ${port}`);

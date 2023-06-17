@@ -1,0 +1,12 @@
+[{
+  "_id": {
+    "$oid": "64868e873d99e1608c98e757"
+  },
+  "username": "333",
+  "password": "$2b$10$/soJCeEBERSEe0RqeuIVn.QSdiEE1TRr4WLgD.hW90usxiBiRzp7i",
+  "jk": "pria",
+  "umur": 10,
+  "roles": "admin",
+  "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwZW5nZ3VuYSI6eyJfaWQiOiI2NDg2OGU4NzNkOTllMTYwOGM5OGU3NTciLCJ1c2VybmFtZSI6IjMzMyIsImprIjoicHJpYSIsInVtdXIiOjEwLCJyb2xlcyI6ImFkbWluIiwiX192IjowfSwiaWF0IjoxNjg2NTU0MjYzLCJleHAiOjE2ODY1NTc4NjN9.9Nf4btqgpel2ZtsYBGB2sm3v6vebJlpkdS1BuSbHdoM",
+  "__v": 0
+}]

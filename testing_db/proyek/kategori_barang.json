@@ -1,0 +1,25 @@
+[{
+  "_id": 1,
+  "nama": "Handphone"
+},{
+  "_id": 2,
+  "nama": "PC"
+},{
+  "_id": 3,
+  "nama": "Laptop"
+},{
+  "_id": 4,
+  "nama": "CPU"
+},{
+  "_id": 5,
+  "nama": "RAM"
+},{
+  "_id": 6,
+  "nama": "SSD"
+},{
+  "_id": 7,
+  "nama": "VGA"
+},{
+  "_id": 8,
+  "nama": "Motherboard"
+}]
