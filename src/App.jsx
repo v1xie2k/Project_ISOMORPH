@@ -1,6 +1,6 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// import { useState } from 'react'
+// import reactLogo from './assets/react.svg'
+// import viteLogo from '/vite.svg'
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
 import Home from './pages/Home'
 import { loader } from './components/Barang/BarangContainer'
@@ -13,6 +13,10 @@ import Profile from './pages/Backend/Profile'
 import History from './pages/Backend/History'
 import Cart from './pages/Backend/Cart'
 import Notification from './pages/Backend/Notification'
+import { Dashboard } from '@mui/icons-material'
+import Anime from './pages/Backend/Admin/Anime'
+import { AnimeLoader } from './components/Anime/AnimeData'
+import { AnimeFormAction } from './components/Anime/AnimeForm'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -28,6 +32,17 @@ const router = createBrowserRouter(
         <Route path='history' element ={<History/>} />
         <Route path='cart' element ={<Cart/>} />
         <Route path='notification' element ={<Notification/>} />
+      </Route>
+      <Route element={<BackendRoot />}>
+        <Route path="dashboard" element={<Dashboard />} />
+        <Route path="admin">
+          <Route
+            path="anime"
+            element={<Anime />}
+            loader={AnimeLoader}
+            action={AnimeFormAction}
+          />
+        </Route>
       </Route>
     </Route>
       

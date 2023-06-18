@@ -15,9 +15,11 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 
 const barangRouter = require("./src/routes/barang")
+const animeRouter = require("./src/routes/anime")
 const kategoriRouter = require("./src/routes/kategori")
 const authRouter = require("./src/routes/auth")
 app.use("/api/v1/barang",barangRouter)
+app.use("/api/v1/anime", animeRouter)
 app.use("/api/v1/kategori",kategoriRouter)
 app.use("/api/v1/auth",authRouter)
 
