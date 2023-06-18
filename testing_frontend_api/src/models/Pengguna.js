@@ -1,16 +1,15 @@
-const {default:mongoose, Schema} = require("mongoose")
-
+const { default: mongoose, Schema } = require("mongoose");
 
 const PenggunaSchema = new Schema({
-    username: String,
-    password: String,
-    nama: String,
-    jk: String,
-    umur: Number,
-    roles: String,
-    refresh_token:String,
-})
+	first_name: String,
+	last_name: String,
+	email: String,
+	password: String,
+	roles: String,
+	receives: String,
+	refresh_token: String,
+});
 
-const Pengguna = mongoose.model("pengguna",PenggunaSchema,"pengguna")
+const Pengguna = mongoose.model("pengguna", PenggunaSchema, "pengguna");
 
-module.exports = Pengguna
+module.exports = Pengguna;
