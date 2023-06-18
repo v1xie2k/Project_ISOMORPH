@@ -79,6 +79,7 @@ export default function BarangCard(props) {
             <Typography variant="body1" color="text.primary" sx={{fontWeight: "bold"}} >
                 Rp {price}
             </Typography>
+            <BarangOption variant = {[...props.variant]} handleClick={handleClick}/>
         </CardContent>
       <CardActions disableSpacing>
       <IconButton aria-label="add to favorites"
