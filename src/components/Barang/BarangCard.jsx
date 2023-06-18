@@ -66,32 +66,20 @@ export default function BarangCard(props) {
 
   return (
     <Card sx={{ maxWidth: 345 }}>
-      <CardHeader
-        avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            R
-          </Avatar>
-        }
-        action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
-        }
-        title={props.name}
-        subheader={price}
-      />
-      {/* <CardMedia
+      <CardMedia
         component="img"
         height="194"
-        image="/static/images/cards/paella.jpg"
+        image="/src/assets/react.svg"
         alt="Paella dish"
-      /> */}
-      <CardContent>
-        <Typography variant="body2" color="text.secondary">
-          Variant
-        </Typography>
-        <BarangOption variant = {[...props.variant]} handleClick={handleClick}/>
-      </CardContent>
+      />
+        <CardContent>
+            <Typography gutterBottom variant="body2" component="div">
+                {props.name}
+            </Typography>
+            <Typography variant="body1" color="text.primary" sx={{fontWeight: "bold"}} >
+                Rp {price}
+            </Typography>
+        </CardContent>
       <CardActions disableSpacing>
       <IconButton aria-label="add to favorites"
     onClick={handleLike}
