@@ -77,7 +77,7 @@ export const AnimeLoader = async () => {
             </Button>
           </Form>
 
-          <Form method="put" action="/admin/Anime/">
+          {/* <Form method="put" action="/admin/Anime/">
           <input type="hidden" name="id" value={params.id} />
           <Button
             type="submit"
@@ -87,7 +87,7 @@ export const AnimeLoader = async () => {
           >
             Update
           </Button>
-        </Form>
+        </Form> */}
         {/* <a href='/admin/anime/{params.id}'>
             <Button
                 type="submit"

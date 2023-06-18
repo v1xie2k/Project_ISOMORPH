@@ -1,3 +1,4 @@
+const request = require('request');
 const {Anime} = require("../models")
 
 const mongoose = require("mongoose")
@@ -10,30 +11,47 @@ const queryAnime = async(req,res ) => {
  }
 
  const postAnime = async (req,res) => {
-   const body = req.body 
-   
-   const result = await Anime.create(body)
+   const getMaxId = await Anime.aggregate()
+        .group({ _id: null, maxId: { $max: "$_id" } })
+        .project({ _id: 0, maxId: 1 })
+        .exec();
 
-   if(result){
-      return res.status(200).json({msg: "berhasil insert", result})
+   const id = Number(getMaxId[0].maxId) + 1;
+
+   const body = req.body;
+   body["_id"] = id;
+   await request('https://api.waifu.pics/sfw/waifu', async function (error, response, resBody) {
+   if (!error && response.statusCode == 200) {
+      const thisBody = JSON.parse(resBody)
+      body['pict'] = thisBody.url
+      const result = await Anime.create(body)
+      if(result){
+         return res.status(200).json({msg: "berhasil insert", result})
+      }
+      else {
+         return res.status(500).json({msg: "gagal insert"})
+      }
    }
-   else {
-      return res.status(500).json({msg: "gagal insert"})
-   }
+   }) 
+
  }
 
 const updateAnime = async(req, res) => {
-   const body = req.body
-   
-   const result = await Anime.updateOne({__id: body.id.toHexString()},
+   const { name, desc} = req.body
+   const {id} = req.params
+   // console.log(req.bod);
+   const result = await Anime.updateOne({_id: id},
    {
-      $set: body
+      $set: {
+         name: name,
+         desc: desc
+      }
    })
-
+   console.log(result);
    if(result){
-      return res.status(200).json({msg: "berhasil insert", result})
+      return res.status(200).json({msg: "berhasil updaet"})
    }else{
-      return res.status(500).json({msg: "gagal insert"})
+      return res.status(500).json({msg: "gagal update"})
    }
 }
 

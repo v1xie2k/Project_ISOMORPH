@@ -25,8 +25,13 @@ export const postAnime = async (data) => {
   return response;
 };
 
-export const updateAnime = async(data) => {
-    // const 
+export const updateAnime = async(id, data) => {
+    const response = await animeApi.put("/anime/"+id, qs.stringify(data), {
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+        },
+    });
+    return response;
 }
 
 export const deleteAnime = async (data) => {

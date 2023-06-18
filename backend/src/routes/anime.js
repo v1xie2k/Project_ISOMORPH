@@ -10,7 +10,7 @@ deleteAnime,
 
 router.get("/",queryAnime)
 router.post("/",postAnime)
-router.put("/",updateAnime)
+router.put("/:id",updateAnime)
 router.delete("/:id",deleteAnime)
 
 module.exports = router
