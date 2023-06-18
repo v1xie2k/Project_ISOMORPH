@@ -5,7 +5,7 @@ queryBarang,
 postBarang,
 deleteBarang,
 } =require("../controllers/barang")
-// const verifyJWT = require("../middlewares/verifyJWT")
+const verifyJWT = require("../middlewares/verifyJWT")
 
 router.get("/",queryBarang)
 router.post("/",postBarang)

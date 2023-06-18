@@ -7,24 +7,19 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon ./index.js"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.0",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
-    "dotenv": "^16.0.3",
+    "dotenv": "^16.1.4",
     "express": "^4.18.2",
-    "joi": "^17.8.3",
+    "joi": "^17.9.2",
     "jsonwebtoken": "^9.0.0",
-<<<<<<< HEAD:testing_frontend_api/package.json
     "mongoose": "^7.2.3",
     "nodemailer": "^6.9.3",
     "nodemon": "^2.0.22"
-=======
-    "mongoose": "^6.9.1",
-    "nodemailer": "^6.9.1",
-    "request": "^2.88.2"
->>>>>>> main:backend/package.json
   }
 }
