@@ -16,7 +16,6 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { useState } from 'react';
 import BarangOption from './BarangOption';
-import { updateLikeAnime } from '../../api/animeApi';
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -32,26 +31,25 @@ const ExpandMore = styled((props) => {
 export default function BarangCard(props) {
   console.log(props);
   
-  const [likes, setLikes] = useState(props.like)  
-  // const [price, setPrice] = useState(props.variant[0].price)
-  // const handleClick = harga => { 
-  //     setPrice(harga)
-  //  }
+  const [likes, setLikes] = useState(0)
+
+  const [price, setPrice] = useState(props.variant[0].price)
+  const handleClick = harga => { 
+      setPrice(harga)
+   }
 
   let jumlahlike
  
   jumlahlike = <Typography minWidth="52px">{likes} {likes ==0 ? "Like" : "Likes"}</Typography>
    const [Ctr, setCtr] = useState(0)
-  const handleLike = async () => { 
+  const handleLike = () => { 
     if(Ctr <1){
-      await setLikes(likes+1)
-      await setCtr(Ctr+1)
-      await updateLikeAnime(props._id, likes+1)
+      setLikes(likes+1)
+      setCtr(Ctr+1)
     }
     else{
-      await setLikes(likes-1)
-      await setCtr(Ctr-1)
-      await updateLikeAnime(props._id, likes -1)
+      setLikes(likes-1)
+      setCtr(Ctr-1)
     }
    }
    console.log(Ctr);
@@ -71,7 +69,7 @@ export default function BarangCard(props) {
       <CardMedia
         component="img"
         height="194"
-        image={props.pict}
+        image="/src/assets/react.svg"
         alt="Paella dish"
       />
         <CardContent>
@@ -79,9 +77,9 @@ export default function BarangCard(props) {
                 {props.name}
             </Typography>
             <Typography variant="body1" color="text.primary" sx={{fontWeight: "bold"}} >
-                {props.desc}
+                Rp {price}
             </Typography>
-            {/* <BarangOption variant = {[...props.variant]} handleClick={handleClick}/> */}
+            <BarangOption variant = {[...props.variant]} handleClick={handleClick}/>
         </CardContent>
       <CardActions disableSpacing>
       <IconButton aria-label="add to favorites"
@@ -91,6 +89,7 @@ export default function BarangCard(props) {
 
         </IconButton>
         {jumlahlike} 
+
 
         <IconButton aria-label="share">
           <ShareIcon />

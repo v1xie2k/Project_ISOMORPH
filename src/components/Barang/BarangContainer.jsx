@@ -1,6 +1,6 @@
 import React from 'react'
 import { useLoaderData } from 'react-router-dom'
-import { queryBarang, queryKategori } from '../../api/index'
+import { queryBarang, queryKategori, getAllAnime } from '../../api/index'
 import { Grid, Typography } from "@mui/material";
 import BarangCard from "./BarangCard"
 
@@ -35,10 +35,11 @@ export default BarangContainer
 
 
 export const loader = async () => { 
-    const query = await queryBarang();
+    // const query = await queryBarang();
+    const query = await getAllAnime();
     let result = {}
 
     result.rows = query
-    result.kategoriList = await queryKategori()
+    // result.kategoriList = await queryKategori()
     return result
  }
