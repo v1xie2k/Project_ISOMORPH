@@ -43,10 +43,30 @@ const updateAnime = async(req, res) => {
    const result = await Anime.updateOne({_id: id},
    {
       $set: {
-         name: name,
-         desc: desc
+         name,
+         desc
       }
    })
+   console.log(result);
+   if(result){
+      return res.status(200).json({msg: "berhasil updaet"})
+   }else{
+      return res.status(500).json({msg: "gagal update"})
+   }
+}
+
+
+const updateLikeAnime = async(req, res) => {
+   const {id, like} = req.params
+   // console.log(req.bod);
+   const result = await Anime.updateOne({_id: id},
+   {
+      $set: {
+         like
+      }
+   })
+   console.log(id);
+   console.log(like);
    console.log(result);
    if(result){
       return res.status(200).json({msg: "berhasil updaet"})
@@ -72,5 +92,6 @@ const updateAnime = async(req, res) => {
     queryAnime,
     postAnime,
     updateAnime,
+    updateLikeAnime,
     deleteAnime
  }

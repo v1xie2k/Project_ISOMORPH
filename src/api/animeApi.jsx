@@ -34,6 +34,12 @@ export const updateAnime = async(id, data) => {
     return response;
 }
 
+export const updateLikeAnime = async(id, like) => {
+    const response = await animeApi.put("/anime/" + id + "/" + like);
+    console.log(response);
+    return response;
+}
+
 export const deleteAnime = async (data) => {
 //   const response = await axiosPrivate.delete("/anime/" + data);
   const response = await animeApi.delete("/anime/" + data);

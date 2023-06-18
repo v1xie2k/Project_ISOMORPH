@@ -15,5 +15,9 @@ export const queryBarang = async () => {
 export const queryKategori = async () => {
     const response = await app.get("/kategori");
     return response;
-  };
-  
+};
+
+export const getAllAnime  = async() => {
+  const response = await app.get("/anime")
+  return response
+}

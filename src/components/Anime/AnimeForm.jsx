@@ -90,8 +90,6 @@ export const AnimeFormAction = async ({ request, params }) => {
   switch (request.method) {
     case "POST":
         const data = await request.formData();
-        console.log(data.get("insert"))
-        console.log(data.get("update"))
 
         if(data.get("insert") == null){
             const id = data.get("id")
@@ -100,7 +98,6 @@ export const AnimeFormAction = async ({ request, params }) => {
                 name: data.get("nama"),
                 desc: data.get("deskripsi"),
             };
-            console.log(input);
             await updateAnime(id, input);
             return { success: true, message: "Update data" };
         }else{
@@ -110,7 +107,6 @@ export const AnimeFormAction = async ({ request, params }) => {
                 like: 0,
                 created_at: new Date()
             };
-            console.log(input);
             await postAnime(input);
             return { success: true, message: "Insert Data" };
         }
