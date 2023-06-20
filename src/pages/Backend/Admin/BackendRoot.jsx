@@ -20,7 +20,14 @@ import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import {  Home, Logout, Man, ManageAccounts, Movie, Summarize } from "@mui/icons-material";
+import {
+  Home,
+  Logout,
+  Man,
+  ManageAccounts,
+  Movie,
+  Summarize,
+} from "@mui/icons-material";
 
 const drawerWidth = 240;
 
@@ -91,10 +98,10 @@ const Drawer = styled(MuiDrawer, {
 
 export default function Backend() {
   // const auth = useSelector((state) => {return  state.auth })
-  // const pengguna = auth.pengguna 
+  // const pengguna = auth.pengguna
   // const dispatch = useDispatch()
-  const navigate = useNavigate()
-  let menus =[
+  const navigate = useNavigate();
+  let menus = [
     {
       link: "/admin/anime",
       text: "Home",
@@ -105,7 +112,7 @@ export default function Backend() {
     //       text: "Anime",
     //       icon: <Summarize/>
     //     }
-  ]
+  ];
   // let menusAdmin = [
   //   {
   //     link: "/admin/movie",
@@ -190,32 +197,41 @@ export default function Backend() {
         </DrawerHeader>
         <Divider />
         <List>
-         {menus.map((item) => { return (
-          <Link
-            to={item.link}
-            key={item.text}
-            style={{textDecoration:"none", color: "inherit"}}>
-              <ListItem disablePadding sx={{ display: "block"}}>
-                <ListItemButton 
-                 sx={{minHeight:48, justifyContent:open? "initial" : "center", px:2.5}}>
-                  <ListItemIcon 
-                  sx={{
-                    minWidth: 0 ,
-                    mr: open ? 3 : "auto",
-                    justifyContent: "center",
-                  }}
+          {menus.map((item) => {
+            return (
+              <Link
+                to={item.link}
+                key={item.text}
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <ListItem disablePadding sx={{ display: "block" }}>
+                  <ListItemButton
+                    sx={{
+                      minHeight: 48,
+                      justifyContent: open ? "initial" : "center",
+                      px: 2.5,
+                    }}
                   >
-                    {item.icon}
-                  </ListItemIcon>
-                  <ListItemText 
-                  primary={item.text} 
-                  sx={{opacity: open ? 1 :  0}}/>
-                 </ListItemButton>
-              </ListItem>
-            </Link>
-         ) })}
-        <Divider />
-        <ListItem
+                    <ListItemIcon
+                      sx={{
+                        minWidth: 0,
+                        mr: open ? 3 : "auto",
+                        justifyContent: "center",
+                      }}
+                    >
+                      {item.icon}
+                    </ListItemIcon>
+                    <ListItemText
+                      primary={item.text}
+                      sx={{ opacity: open ? 1 : 0 }}
+                    />
+                  </ListItemButton>
+                </ListItem>
+              </Link>
+            );
+          })}
+          <Divider />
+          <ListItem
             // onClick={doLogout}
             key="Logout"
             disablePadding
