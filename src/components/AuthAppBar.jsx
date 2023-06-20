@@ -71,9 +71,9 @@ function AuthAppBar() {
           open={isMenuOpen}
           onClose={handleMenuClose}
         >
-            <MenuItem ><Button href="history">History</Button></MenuItem>
-            <MenuItem ><Button href="profile">Profile</Button></MenuItem>
-            <MenuItem ><Button href="login">Logout</Button></MenuItem>
+            <MenuItem ><Button href="/history">History</Button></MenuItem>
+            <MenuItem ><Button href="/profile">Profile</Button></MenuItem>
+            <MenuItem ><Button href="/login">Logout</Button></MenuItem>
         
 
 

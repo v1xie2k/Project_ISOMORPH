@@ -8,7 +8,7 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import Root from './pages/Root'
 import UserHome from './pages/Backend/UserHome'
-import BackendRoot from "./pages/Backend/BackendRoot"
+import PenggunaRoot from "./pages/Backend/PenggunaRoot"
 import Profile from './pages/Backend/Profile'
 import History from './pages/Backend/History'
 import Cart from './pages/Backend/Cart'
@@ -17,6 +17,7 @@ import Anime from './pages/Backend/Admin/Anime'
 import { AnimeLoader } from './components/Anime/AnimeData'
 import { AnimeFormAction } from './components/Anime/AnimeForm'
 import Dashboard from './pages/Dashboard'
+import BackendRoot from './pages/Backend/Admin/BackendRoot'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -26,7 +27,7 @@ const router = createBrowserRouter(
         <Route path='login' element ={<Login/>}/>
         <Route path='register' element ={<Register/>}/>
       </Route>
-      <Route element = {<BackendRoot/>}>
+      <Route element = {<PenggunaRoot/>}>
         <Route path='home' element ={<UserHome/>} loader={loader}/>
         <Route path='profile' element ={<Profile/>} />
         <Route path='history' element ={<History/>} />
