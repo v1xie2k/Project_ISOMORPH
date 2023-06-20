@@ -69,6 +69,8 @@ export default function Register() {
                   id="firstName"
                   label="First Name"
                   autoFocus
+                  color='secondary'
+
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -79,6 +81,8 @@ export default function Register() {
                   label="Last Name"
                   name="lastName"
                   autoComplete="family-name"
+                  color='secondary'
+
                 />
               </Grid>
               <Grid item xs={12}>
@@ -89,6 +93,7 @@ export default function Register() {
                   label="Email Address"
                   name="email"
                   autoComplete="email"
+                  color='secondary'
                 />
               </Grid>
               <Grid item xs={12}>
@@ -100,16 +105,21 @@ export default function Register() {
                   type="password"
                   id="password"
                   autoComplete="new-password"
+                  color='secondary'
+
                 />
               </Grid>
               <Grid item xs={12}>
                 <FormControlLabel
-                  control={<Checkbox value="allowExtraEmails" color="primary" />}
+                
+                  control={<Checkbox value="allowExtraEmails" color="secondary" />}
                   label="I want to receive inspiration, marketing promotions and updates via email."
+
                 />
               </Grid>
             </Grid>
             <Button
+            color='secondary'
               type="submit"
               fullWidth
               variant="contained"

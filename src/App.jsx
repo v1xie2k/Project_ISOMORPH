@@ -13,10 +13,10 @@ import Profile from './pages/Backend/Profile'
 import History from './pages/Backend/History'
 import Cart from './pages/Backend/Cart'
 import Notification from './pages/Backend/Notification'
-import { Dashboard } from '@mui/icons-material'
 import Anime from './pages/Backend/Admin/Anime'
 import { AnimeLoader } from './components/Anime/AnimeData'
 import { AnimeFormAction } from './components/Anime/AnimeForm'
+import Dashboard from './pages/Dashboard'
 
 const router = createBrowserRouter(
   createRoutesFromElements(

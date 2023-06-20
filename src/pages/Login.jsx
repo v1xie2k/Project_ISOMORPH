@@ -60,6 +60,8 @@ export default function Login() {
           </Typography>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
             <TextField
+                  color='secondary'
+
               margin="normal"
               required
               fullWidth
@@ -70,6 +72,8 @@ export default function Login() {
               autoFocus
             />
             <TextField
+                  color='secondary'
+
               margin="normal"
               required
               fullWidth
@@ -80,10 +84,11 @@ export default function Login() {
               autoComplete="current-password"
             />
             <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
+              control={<Checkbox value="remember" color="secondary" />}
               label="Remember me"
             />
             <Button
+            color='secondary'
               type="submit"
               fullWidth
               variant="contained"
