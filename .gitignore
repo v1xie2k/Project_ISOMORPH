@@ -25,3 +25,4 @@ dist-ssr
 
 # backend env
 testing_frontend_api/.env
+backend/.env
