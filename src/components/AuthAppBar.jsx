@@ -71,9 +71,9 @@ function AuthAppBar() {
           open={isMenuOpen}
           onClose={handleMenuClose}
         >
-            <MenuItem ><Button href="history">History</Button></MenuItem>
-            <MenuItem ><Button href="profile">Profile</Button></MenuItem>
-            <MenuItem ><Button href="login">Logout</Button></MenuItem>
+            <MenuItem ><Button href="/history">History</Button></MenuItem>
+            <MenuItem ><Button href="/profile">Profile</Button></MenuItem>
+            <MenuItem ><Button href="/login">Logout</Button></MenuItem>
         
 
 
@@ -144,7 +144,7 @@ function AuthAppBar() {
 
   return (
 
-    <AppBar position="static">
+    <AppBar position="static" color="secondary">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />

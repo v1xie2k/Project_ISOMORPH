@@ -35,6 +35,8 @@ const AnimeForm = () => {
       {/* {alertKembalian} */}
       <Form method="post" action="/admin/anime">
         <TextField
+                  color='secondary'
+
           label="Nama anime"
           variant="outlined"
           sx={{ my: 3 }}
@@ -44,6 +46,8 @@ const AnimeForm = () => {
         ></TextField>
 
         <TextField
+                  color='secondary'
+
           label="Deskripsi"
           variant="outlined"
           sx={{ my: 3 }}
@@ -52,6 +56,8 @@ const AnimeForm = () => {
           name="deskripsi"
         ></TextField>
         <TextField
+                  color='secondary'
+
           label="Id"
           variant="outlined"
           sx={{ my: 3 }}
